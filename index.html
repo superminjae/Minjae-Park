@@ -16,7 +16,7 @@
             overflow-x: hidden;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
             background: white;
@@ -26,15 +26,33 @@
         }
         .header {
             text-align: center;
+            padding: 20px 0;
+            background: #4CAF50; /* Green background */
+            color: white;
+            border-radius: 8px 8px 0 0;
+            background-image: url('https://media.licdn.com/dms/image/D5616AQGypSDG9mLZTQ/profile-displaybackgroundimage-shrink_350_1400/0/1713719692940?e=1721260800&v=beta&t=jPVTBL2dpWj45-70QbtAAsdijItzPi3MT7Tb5rPaDiQ');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+        }
+        .header h1 {
+            background-color: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
         }
         .header img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
+            border: 4px solid white; /* White border around the image */
+            background-color: white; /* Ensure image appears correctly */
         }
         .content h2 {
             border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
+            color: #4CAF50;
         }
         .experience {
             margin-bottom: 20px;
@@ -46,26 +64,34 @@
         }
         .experience ul {
             text-align: left; /* Align bullet points to the left */
+            list-style-type: none; /* Remove default bullet points */
+            padding: 0;
+        }
+        .experience ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .experience ul li::before {
+            content: '✓'; /* Custom bullet point */
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
         }
         .contact-info {
             text-align: center;
             margin-bottom: 20px;
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
-        }
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes slideLeft {
-            from { transform: translateX(50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideRight {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
         }
         .fade-in-section {
             opacity: 0;
@@ -87,32 +113,59 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .slide-left-section {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        .skills, .education {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
         }
-        .slide-left-section.is-visible {
-            opacity: 1;
-            transform: translateX(0);
+        .news-media {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
         }
-        .slide-right-section {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        .news-media a {
+            color: white;
+            text-decoration: underline;
         }
-        .slide-right-section.is-visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .game-container {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .game-frame {
+        .collapsible {
+            background-color: #f9f9f9;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
             width: 100%;
-            height: 500px;
-            border: 2px solid #ddd;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .collapsible:hover {
+            background-color: #ddd;
+        }
+        .collapsible::after {
+            content: '\002B'; /* Unicode for plus sign */
+            font-size: 18px;
+            color: #4CAF50;
+        }
+        .collapsible.active::after {
+            content: '\2212'; /* Unicode for minus sign */
+        }
+        .content-collapsible {
+            padding: 0 20px;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .content-collapsible ul {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -151,52 +204,62 @@
                 <a href="https://ownaparisbaguette.com/" target="_blank">
                     <img src="https://media.licdn.com/dms/image/C4D0BAQF_v3AD61tBWg/company-logo_200_200/0/1631719909324/paris_baguette_logo?e=1723680000&v=beta&t=a7X-A36NPYM-70E-tzRQaWyoiyJHZR-Re4Orlaxqges" alt="Paris Baguette">
                 </a>
-                <h3>Store Development Manager, Paris Baguette North America</h3>
-                <p>Dec 2018 – Oct 2021 (2 yrs 11 mos)</p>
-                <ul>
-                    <li>Spearheaded the opening and transfer process for franchise locations, utilizing data analysis to optimize store performance.</li>
-                    <li>Developed and implemented reward and recognition programs (R&R) and standard operating procedures (SOPs) for the "Pro-Team."</li>
-                    <li>Created comprehensive training materials, including manuals and job aids, to ensure consistent onboarding and skill development.</li>
-                </ul>
+                <button type="button" class="collapsible">Store Development Manager, Paris Baguette North America (Dec 2018 – Oct 2021)</button>
+                <div class="content-collapsible">
+                    <ul>
+                        <li>Spearheaded the opening and transfer process for franchise locations, utilizing data analysis to optimize store performance.</li>
+                        <li>Developed and implemented reward and recognition programs (R&R) and standard operating procedures (SOPs) for the "Pro-Team."</li>
+                        <li>Created comprehensive training materials, including manuals and job aids, to ensure consistent onboarding and skill development.</li>
+                    </ul>
+                </div>
             </div>
             <div class="experience fade-in-section">
-                <h3>District Manager, Paris Baguette North America</h3>
-                <p>Jul 2018 – Dec 2018 (6 mos)</p>
-                <ul>
-                    <li>Conducted orientation sessions and facilitated on-the-job training for corporate new hires and franchisees.</li>
-                    <li>Utilized social media platforms and Indeed to recruit and engage with potential candidates, successfully hiring up to 20 employees per location.</li>
-                    <li>Conducted routine quality checks to maintain operational standards and optimize customer satisfaction.</li>
-                </ul>
+                <button type="button" class="collapsible">District Manager, Paris Baguette North America (Jul 2018 – Dec 2018)</button>
+                <div class="content-collapsible">
+                    <ul>
+                        <li>Conducted orientation sessions and facilitated on-the-job training for corporate new hires and franchisees.</li>
+                        <li>Utilized social media platforms and Indeed to recruit and engage with potential candidates, successfully hiring up to 20 employees per location.</li>
+                        <li>Conducted routine quality checks to maintain operational standards and optimize customer satisfaction.</li>
+                    </ul>
+                </div>
             </div>
             <div class="experience fade-in-section">
-                <h3>General Manager, Paris Baguette North America</h3>
-                <p>Apr 2017 – Apr 2018 (1 yr 1 mo)</p>
-                <ul>
-                    <li>Directed a diverse team of over 25 staff members in a fast-paced environment, ensuring exceptional customer service and operational efficiency.</li>
-                    <li>Analyzed sales data to forecast production needs and minimize waste, effectively managing inventory and expenses.</li>
-                    <li>Orchestrated community outreach events, fostering brand awareness and customer engagement.</li>
-                </ul>
+                <button type="button" class="collapsible">General Manager, Paris Baguette North America (Apr 2017 – Apr 2018)</button>
+                <div class="content-collapsible">
+                    <ul>
+                        <li>Directed a diverse team of over 25 staff members in a fast-paced environment, ensuring exceptional customer service and operational efficiency.</li>
+                        <li>Analyzed sales data to forecast production needs and minimize waste, effectively managing inventory and expenses.</li>
+                        <li>Orchestrated community outreach events, fostering brand awareness and customer engagement.</li>
+                    </ul>
+                </div>
             </div>
             <div class="experience fade-in-section">
-                <h3>Assistant General Manager, Paris Baguette North America</h3>
-                <p>Feb 2017 – Apr 2017 (3 mos)</p>
-                <ul>
-                    <li>Provided comprehensive training to new hires on store operations and daily tasks, ensuring a smooth onboarding process.</li>
-                    <li>Leveraged data analysis to optimize production levels and minimize waste.</li>
-                    <li>Successfully managed various departments, including cakes, bakery, sandwiches, and sales, in a fast-paced environment.</li>
-                </ul>
+                <button type="button" class="collapsible">Assistant General Manager, Paris Baguette North America (Feb 2017 – Apr 2017)</button>
+                <div class="content-collapsible">
+                    <ul>
+                        <li>Provided comprehensive training to new hires on store operations and daily tasks, ensuring a smooth onboarding process.</li>
+                        <li>Leveraged data analysis to optimize production levels and minimize waste.</li>
+                        <li>Successfully managed various departments, including cakes, bakery, sandwiches, and sales, in a fast-paced environment.</li>
+                    </ul>
+                </div>
             </div>
             <div class="experience fade-in-section">
-                <h3>Shift Manager, Paris Baguette North America</h3>
-                <p>Jun 2013 – Feb 2017 (3 yrs 9 mos)</p>
+                <button type="button" class="collapsible">Shift Manager, Paris Baguette North America (Jun 2013 – Feb 2017)</button>
+                <div class="content-collapsible">
+                    <ul>
+                        <li>Oversaw day-to-day operations and ensured efficient store functioning.</li>
+                        <li>Managed a team of employees, providing training and performance feedback.</li>
+                        <li>Maintained high standards of customer service and product quality.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="content slide-left-section">
+        <div class="content slide-left-section education">
             <h2>Education</h2>
             <p><strong>Los Angeles City College</strong><br>Business/Managerial Economics (2023 – 2025)</p>
             <p><strong>UCLA Community K-12</strong><br>High School Diploma</p>
         </div>
-        <div class="content slide-right-section">
+        <div class="content slide-right-section skills">
             <h2>Skills</h2>
             <ul>
                 <li>Customer Service</li>
@@ -206,9 +269,9 @@
                 <li>Training and Development (HR)</li>
             </ul>
         </div>
-        <div class="game-container fade-in-section">
-            <h2>Play the Mario Game!</h2>
-            <iframe class="game-frame" src="https://supermario-game.com/" frameborder="0"></iframe>
+        <div class="content slide-up-section news-media">
+            <h2>News & Media</h2>
+            <p>Read the recent interview featuring Minjae Jayden Park: <a href="https://www.abc10.com/article/news/local/tous-les-jours-roseville-hours-menu-address/103-04b4ebcd-0a8d-4020-ab36-9d67491ede9d" target="_blank">Tous Les Jours Roseville - Hours, Menu, Address</a></p>
         </div>
     </div>
     <script>
@@ -236,6 +299,19 @@
 
             sliders.forEach(slider => {
                 appearOnScroll.observe(slider);
+            });
+
+            const collapsibles = document.querySelectorAll('.collapsible');
+            collapsibles.forEach(collapsible => {
+                collapsible.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                        content.style.display = 'block';
+                    }
+                });
             });
         });
     </script>
