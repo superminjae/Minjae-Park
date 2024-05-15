@@ -1,1 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minjae Jayden Park - Profile</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9; /* Lighter background color */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .header {
+            text-align: center;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .content h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .experience {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .experience img {
+            width: 100px; /* Larger logo size */
+            margin-bottom: 10px;
+        }
+        .experience ul {
+            text-align: left; /* Align bullet points to the left */
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideLeft {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideRight {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(50px);
+            visibility: hidden;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out, visibility 0.6s;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+        .slide-up-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .slide-up-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .slide-left-section {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .slide-left-section.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .slide-right-section {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .slide-right-section.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container slide-up-section">
+        <div class="header">
+            <img src="https://media.licdn.com/dms/image/D5603AQHmYlm1hegTjw/profile-displayphoto-shrink_800_800/0/1711687614499?e=1721260800&v=beta&t=jj2W9gWj60igYa6jIB9Ipa79D0ofCOfu1MV3mUf_Awg" alt="Minjae Jayden Park">
+            <h1>Minjae Jayden Park</h1>
+        </div>
+        <div class="contact-info slide-left-section">
+            <p>Email: <a href="mailto:superminjae@gmail.com">superminjae@gmail.com</a></p>
+            <p>Phone: 213-435-7773</p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/minjayden" target="_blank">linkedin.com/in/minjayden</a></p>
+        </div>
+        <div class="content fade-in-section">
+            <h2>Summary</h2>
+            <p>An excellent communicator, project manager, and organizer with years of experience in franchise bakery operations. A creative leader with expertise in new store openings, employee learning, and team-oriented work environments.</p>
+        </div>
+        <div class="content slide-right-section">
+            <h2>Experience</h2>
+            <div class="experience fade-in-section">
+                <a href="https://www.tljus.com/our-story" target="_blank">
+                    <img src="https://media.licdn.com/dms/image/C560BAQFqyTqdcS106Q/company-logo_200_200/0/1631414504495/cj_foodville_usa_inc_logo?e=1723680000&v=beta&t=jK5fDEZX3dLdsqNeX483e1cQR7rCsJyponD5KjZ3YWo" alt="CJ Foodville">
+                </a>
+                <h3>Senior District Manager, CJ Foodville USA</h3>
+                <p>Oct 2021 – Present (2 yrs 8 mos)</p>
+                <ul>
+                    <li>Delivered outstanding sales growth, achieving a 12.35% increase from $15.34 million in 2021 to $17.23 million in 2022 across multiple store locations.</li>
+                    <li>Notable growth in key stores like Dublin (+5.0%), Happy Valley (+65.1%), and Beaverton (+1.4%).</li>
+                    <li>Oversaw operations of up to 22 locations, ensuring high standards of service and profitability.</li>
+                    <li>Consulted 13 franchisees to optimize P&L management through effective production sheet management and sales forecasting.</li>
+                    <li>Led the successful launch of 16 new store openings.</li>
+                </ul>
+            </div>
+            <div class="experience fade-in-section">
+                <a href="https://ownaparisbaguette.com/" target="_blank">
+                    <img src="https://media.licdn.com/dms/image/C4D0BAQF_v3AD61tBWg/company-logo_200_200/0/1631719909324/paris_baguette_logo?e=1723680000&v=beta&t=a7X-A36NPYM-70E-tzRQaWyoiyJHZR-Re4Orlaxqges" alt="Paris Baguette">
+                </a>
+                <h3>Store Development Manager, Paris Baguette North America</h3>
+                <p>Dec 2018 – Oct 2021 (2 yrs 11 mos)</p>
+                <ul>
+                    <li>Spearheaded the opening and transfer process for franchise locations, utilizing data analysis to optimize store performance.</li>
+                    <li>Developed and implemented reward and recognition programs (R&R) and standard operating procedures (SOPs) for the "Pro-Team."</li>
+                    <li>Created comprehensive training materials, including manuals and job aids, to ensure consistent onboarding and skill development.</li>
+                </ul>
+            </div>
+            <div class="experience fade-in-section">
+                <h3>District Manager, Paris Baguette North America</h3>
+                <p>Jul 2018 – Dec 2018 (6 mos)</p>
+                <ul>
+                    <li>Conducted orientation sessions and facilitated on-the-job training for corporate new hires and franchisees.</li>
+                    <li>Utilized social media platforms and Indeed to recruit and engage with potential candidates, successfully hiring up to 20 employees per location.</li>
+                    <li>Conducted routine quality checks to maintain operational standards and optimize customer satisfaction.</li>
+                </ul>
+            </div>
+            <div class="experience fade-in-section">
+                <h3>General Manager, Paris Baguette North America</h3>
+                <p>Apr 2017 – Apr 2018 (1 yr 1 mo)</p>
+                <ul>
+                    <li>Directed a diverse team of over 25 staff members in a fast-paced environment, ensuring exceptional customer service and operational efficiency.</li>
+                    <li>Analyzed sales data to forecast production needs and minimize waste, effectively managing inventory and expenses.</li>
+                    <li>Orchestrated community outreach events, fostering brand awareness and customer engagement.</li>
+                </ul>
+            </div>
+            <div class="experience fade-in-section">
+                <h3>Assistant General Manager, Paris Baguette North America</h3>
+                <p>Feb 2017 – Apr 2017 (3 mos)</p>
+                <ul>
+                    <li>Provided comprehensive training to new hires on store operations and daily tasks, ensuring a smooth onboarding process.</li>
+                    <li>Leveraged data analysis to optimize production levels and minimize waste.</li>
+                    <li>Successfully managed various departments, including cakes, bakery, sandwiches, and sales, in a fast-paced environment.</li>
+                </ul>
+            </div>
+            <div class="experience fade-in-section">
+                <h3>Shift Manager, Paris Baguette North America</h3>
+                <p>Jun 2013 – Feb 2017 (3 yrs 9 mos)</p>
+            </div>
+        </div>
+        <div class="content slide-left-section">
+            <h2>Education</h2>
+            <p><strong>Los Angeles City College</strong><br>Business/Managerial Economics (2023 – 2025)</p>
+            <p><strong>UCLA Community K-12</strong><br>High School Diploma</p>
+        </div>
+        <div class="content slide-right-section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Customer Service</li>
+                <li>Leadership</li>
+                <li>Microsoft Excel</li>
+                <li>Microsoft PowerPoint</li>
+                <li>Training and Development (HR)</li>
+            </ul>
+        </div>
+        <div class="content slide-up-section">
+            <h2>News & Media</h2>
+            <p>Read the recent interview featuring Minjae Jayden Park: <a href="https://www.abc10.com/article/news/local/tous-les-jours-roseville-hours-menu-address/103-04b4ebcd-0a8d-4020-ab36-9d67491ede9d" target="_blank">Tous Les Jours Roseville - Hours, Menu, Address</a></p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faders = document.querySelectorAll('.fade-in-section');
+            const sliders = document.querySelectorAll('.slide-up-section, .slide-left-section, .slide-right-section');
+            const appearOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('is-visible');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            sliders.forEach(slider => {
+                appearOnScroll.observe(slider);
+            });
+        });
+    </script>
+</body>
+</html>
