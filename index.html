@@ -27,7 +27,7 @@
         .header {
             text-align: center;
             padding: 20px 0;
-            background: #4CAF50; /* Green background */
+            background: #074727; /* Green background */
             color: white;
             border-radius: 8px 8px 0 0;
             background-image: url('https://media.licdn.com/dms/image/D5616AQGypSDG9mLZTQ/profile-displaybackgroundimage-shrink_350_1400/0/1713719692940?e=1721260800&v=beta&t=jPVTBL2dpWj45-70QbtAAsdijItzPi3MT7Tb5rPaDiQ');
@@ -52,14 +52,14 @@
         .content h2 {
             border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
-            color: #4CAF50;
+            color: #074727;
         }
         .experience {
             margin-bottom: 20px;
             text-align: center;
         }
         .experience img {
-            width: 100px; /* Larger logo size */
+            width: 100px; /* Logo size */
             margin-bottom: 10px;
         }
         .experience ul {
@@ -76,7 +76,7 @@
             content: '✓'; /* Custom bullet point */
             position: absolute;
             left: 0;
-            color: #4CAF50;
+            color: #074727;
         }
         .contact-info {
             text-align: center;
@@ -86,7 +86,7 @@
             border-radius: 8px;
         }
         .contact-info a {
-            color: #4CAF50;
+            color: #074727;
             text-decoration: none;
         }
         @keyframes fadeIn {
@@ -120,7 +120,7 @@
             margin: 20px 0;
         }
         .news-media {
-            background: #4CAF50;
+            background: #074727;
             color: white;
             padding: 20px;
             border-radius: 8px;
@@ -150,7 +150,7 @@
         .collapsible::after {
             content: '\002B'; /* Unicode for plus sign */
             font-size: 18px;
-            color: #4CAF50;
+            color: #074727;
         }
         .collapsible.active::after {
             content: '\2212'; /* Unicode for minus sign */
@@ -166,6 +166,18 @@
         }
         .content-collapsible ul {
             margin-top: 10px;
+        }
+        .collage {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .collage img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -188,7 +200,8 @@
             <h2>Experience</h2>
             <div class="experience fade-in-section">
                 <a href="https://www.tljus.com/our-story" target="_blank">
-                    <img src="https://media.licdn.com/dms/image/C560BAQFqyTqdcS106Q/company-logo_200_200/0/1631414504495/cj_foodville_usa_inc_logo?e=1723680000&v=beta&t=jK5fDEZX3dLdsqNeX483e1cQR7rCsJyponD5KjZ3YWo" alt="CJ Foodville">
+                    <img src="https://media.licdn.com/dms/image/C560BAQFqyTqdcS106Q/company-logo_200_200/0/1631414504495/cj_foodville_usa_inc_logo?e=1723680000&v=beta&t=jK5fDEZX3dLdsqNeX483e1cQR7rCsJyponD5KjZ3YWo" alt="CJ Foodville" style="width: 100px;">
+                    <img src="https://mma.prnewswire.com/media/1506832/TOUS_les_JOURS_USA.jpg?p=facebook" alt="TOUS les JOURS" style="width: 200px; margin-left: 10px;">
                 </a>
                 <h3>Senior District Manager, CJ Foodville USA</h3>
                 <p>Oct 2021 – Present (2 yrs 8 mos)</p>
@@ -271,7 +284,36 @@
         </div>
         <div class="content slide-up-section news-media">
             <h2>News & Media</h2>
-            <p>Read the recent interview featuring Minjae Jayden Park: <a href="https://www.abc10.com/article/news/local/tous-les-jours-roseville-hours-menu-address/103-04b4ebcd-0a8d-4020-ab36-9d67491ede9d" target="_blank">Tous Les Jours Roseville - Hours, Menu, Address</a></p>
+            <p>Read the recent interview featuring Minjae Jayden Park: <a href="https://www.abc10.com/article/news/local/tous-les-jours-roseville-hours-menu-address/103-04b4ebcd-0a8d-4020-ab36-9d67491ede9d" target="_blank">TOUS les JOURS Roseville - Hours, Menu, Address</a></p>
+        </div>
+        <div class="content slide-up-section">
+            <h2>TOUS les JOURS Locations</h2>
+            <button type="button" class="collapsible">TOUS les JOURS Locations I've Opened</button>
+            <div class="content-collapsible">
+                <div class="collage">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/4f85524f-251d-4e38-96a3-c5849fd6dea3/IMG_3060.jpeg" alt="Location 1">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/396e4001-a587-497b-926a-0a5dec9d5a2b/IMG_2747.jpeg" alt="Location 2">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/c0717b07-e4c1-4c5d-be30-83b9f1785f5e/IMG_1933.jpeg" alt="Location 3">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/0364b453-04a0-48e1-b248-95b12f9ac9f1/IMG_1021.jpeg" alt="Location 4">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/a302ed1e-6ffa-4700-8169-e67868830b27/IMG_1019.jpeg" alt="Location 5">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/81c37cf6-b12e-404c-9c60-d10ce6922b65/IMG_1870.jpeg" alt="Location 6">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/657916a6-df30-4980-9855-36d4a1e31845/IMG_1493.jpeg" alt="Location 7">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/edf503e2-99e1-4611-a0ca-b56e148da115/IMG_8948.jpeg" alt="Location 8">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/a5676236-e9aa-4bf1-bb0f-cf5f5d71697c/IMG_9645.jpeg" alt="Location 9">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/41eb3e56-2667-489c-84a6-c74b17cb73b7/IMG_7658.jpeg" alt="Location 10">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/c507ddf7-37cf-4c1f-b079-f9081b121b61/IMG_4166.jpeg" alt="Location 11">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/0e8c1620-d2a2-4b4e-a5cc-f7c4762af1d1/IMG_4136.jpeg" alt="Location 12">
+                    <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/a4625be0-fcd8-459d-a9a6-7ccae2bc0ef2/aa93d6c9-4083-4e3a-8360-de9f98f69f01/IMG_3240.jpeg" alt="Location 13">
+                </div>
+            </div>
+        </div>
+        <div class="content slide-up-section">
+            <h2>Paris Baguette</h2>
+            <button type="button" class="collapsible">Paris Baguette Locations I've Managed</button>
+            <div class="content-collapsible">
+                <!-- Add content here for Paris Baguette locations -->
+                <p>-</p>
+            </div>
         </div>
     </div>
     <script>
